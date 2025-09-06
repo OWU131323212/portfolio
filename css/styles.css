@@ -1,0 +1,737 @@
+@charset "utf-8";
+
+/* =================
+基本のスタイル
+================= */
+
+body {
+  background-color: #fff;
+  color: #333;
+  background-color: #000; /* ページの余白部分を黒に */
+}
+
+.header {
+  max-width: 1440px;
+  height: 88px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding: 24px 40px;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+
+.header-logo {
+  display: block;
+  width: 170px;
+}
+
+.site-menu {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+}
+
+.site-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 40px;
+}
+
+.site-menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.toggle-menu-button {
+  display: none;
+}
+
+.flat-button {
+  background-color: #1f3466;
+  color: #fff;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  padding: 10px 48px;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* ヒーローセクション */
+#hero {
+  position: relative;
+  /* ヘッダーの高さ分だけ下にずらす */
+  padding-top: 88px;
+  height: 80vh; /* 画面の高さの80%に設定 */
+  box-sizing: border-box; /* paddingを含めた高さを100vhにする */
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-content {
+  position: absolute;
+  top: 55%; /* 少し調整 */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 90%;
+  max-width: 420px;
+  color: #fff;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.hero-content p {
+  font-size: 18px;
+}
+
+.hero-links {
+  display: flex;
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.hero-links a {
+  color: #fff;
+  font-size: 32px;
+  transition: transform 0.3s;
+}
+
+.hero-links a:hover {
+  transform: scale(1.2);
+}
+
+/* メインコンテンツ */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* mainタグ直下のセクションに共通のスタイルを適用 */
+.main > section {
+  width: 100%;
+  padding: 100px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+/* セクションの背景色を交互に設定 */
+#about,
+#works,
+#contact {
+  background-color: #f0f5ff; /* 淡い青 */
+}
+
+.section-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-title h2 {
+  /* フォントサイズを大きくする */
+  font-size: 56px;
+  font-weight: bold;
+  color: #333;
+}
+
+.section-title p {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Aboutセクション */
+.about-area {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  max-width: 900px;
+  text-align: left;
+}
+
+.my-photo {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+}
+
+.my-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.my-profile {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+}
+
+.my-profile h3 {
+  color: #333;
+  font-size: 32px;
+}
+
+.my-profile p {
+  color: #333;
+  font-size: 16px;
+}
+
+.my-profile-details {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.detail-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.hobby-item {
+  grid-column: 1 / 3;
+}
+
+.detail-item h4 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1f3466;
+  margin-bottom: 12px;
+}
+
+.detail-item h4 i {
+  margin-right: 8px;
+}
+
+.detail-item ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.detail-item li {
+  font-size: 16px;
+}
+
+/* Skillsセクション */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 64px;
+  justify-content: center;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3列固定 */
+  gap: 32px;
+  margin: 40px 0;
+}
+
+.skill-card {
+  display: block;
+  width: 280px;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  background-color: #fff;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 32px 16px 24px 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.skill-card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 16px;
+}
+
+.skill-card h3 {
+  margin: 8px 0 4px 0;
+  font-size: 1.2em;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 8px;
+}
+
+.skill-card .stars {
+  color: #222;
+  margin-bottom: 8px;
+  font-size: 1.1em;
+}
+
+.skill-card .exp {
+  color: #666;
+  font-size: 0.95em;
+}
+
+/* Worksセクション */
+#works {
+  overflow: hidden;
+}
+
+.works-scroller-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  align-items: center;
+}
+
+.works-scroller {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  /* スクロールバーを非表示にする */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.works-scroller::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.works-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 24px;
+  padding: 24px 0;
+  width: max-content;
+}
+
+.works-card {
+  flex: 0 0 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.works-card .work-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.works-card h3 {
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0 16px;
+}
+
+.tag {
+  background-color: #eef2f9;
+  padding: 4px 12px;
+  border-radius: 4px;
+  color: #333;
+  font-size: 14px;
+  margin: 0 16px 16px;
+  align-self: flex-start;
+}
+
+.arrow-button {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.arrow-button:hover {
+  background-color: #fff;
+  transform: scale(1.1);
+}
+
+.arrow-left {
+  margin-right: 16px;
+}
+
+.arrow-right {
+  margin-left: 16px;
+}
+
+/* Experienceセクション */
+.experience-container {
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.experience-item {
+  width: 320px;
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 8px;
+}
+
+.experience-item h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #1f3466;
+  padding-bottom: 8px;
+}
+
+.experience-item h3 i {
+  margin-right: 12px;
+  color: #1f3466;
+}
+
+.experience-item ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.experience-item li {
+  font-size: 16px;
+  padding: 8px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.experience-item li:last-child {
+  border-bottom: none;
+}
+
+/* Contactセクション */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.contact-form label {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: #fff;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #1f3466;
+  box-shadow: 0 0 5px rgba(31, 52, 102, 0.5);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.contact-form .flat-button {
+  align-self: center;
+  border: none;
+  cursor: pointer;
+  width: 200px;
+  margin-top: 16px;
+}
+
+/* フッター */
+.footer {
+  background-color: #1f3466;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* =================
+スマホ用のスタイル (800px以下)
+================= */
+@media (max-width: 800px) {
+  .header {
+    position: fixed;
+    background-color: #fff;
+    box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.1);
+  }
+  .toggle-menu-button {
+    display: block;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  .toggle-menu-button img {
+    width: 30px;
+    height: 30px;
+  }
+  .header-site-menu {
+    position: fixed;
+    top: 88px; /* ヘッダーの高さに合わせる */
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    display: none;
+  }
+  .header-site-menu.is-shown {
+    display: block;
+  }
+  .site-menu {
+    flex-direction: column;
+  }
+  .site-menu ul {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .site-menu ul li {
+    font-size: 24px;
+  }
+
+  .site-menu a {
+    color: #333; /* ハンバーガーメニュー展開時の文字色を黒に */
+  }
+  /* ↑↑↑ ここを追加/修正 ↑↑↑ */
+
+  .site-menu .flat-button {
+    color: #333; /* ここが黒になっています */
+    background-color: transparent;
+    border: 1px solid #333;
+  }
+
+  .section-title h2 {
+    font-size: 40px;
+  }
+
+  .about-area {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .my-profile {
+    width: 100%;
+    max-width: 340px;
+    text-align: center;
+  }
+  .my-profile-details {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+  .skills {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
+  .skill-card {
+    width: 90%;
+    max-width: 320px;
+  }
+
+  .works-scroller-wrapper {
+    width: 90%;
+  }
+
+  .arrow-button {
+    display: none; /* スマホでは矢印を非表示にし、スワイプ操作を優先 */
+  }
+
+  .works-card {
+    flex-basis: 260px;
+  }
+  .experience-container {
+    gap: 40px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .experience-item {
+    width: 90%;
+    max-width: 320px;
+  }
+  #contact {
+    padding: 60px 16px 80px 16px;
+  }
+}
+
+/*
+  【削除】前回追加した以下の指定を削除してください。
+  これにより、セクションタイトルが一括で白くなるのを防ぎます。
+*/
+/*
+.section-title h2,
+.section-title p {
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+*/ /* ここに「*/
+」を追加しました */
+
+/* 【追加・修正】セクションの背景色に合わせてタイトル色を個別に設定 */
+
+/* 背景が水色(#f0f5ff)のセクションのタイトル文字を黒に戻す */
+#about .section-title h2,
+#about .section-title p,
+#works .section-title h2,
+#works .section-title p,
+#contact .section-title h2,
+#contact .section-title p {
+  color: #333;
+  text-shadow: none; /* 影も削除 */
+}
+
+/* 背景が黒(#121212)のセクションのタイトル文字を白に設定 */
+#skills .section-title h2,
+#skills .section-title p,
+#experience .section-title h2,
+#experience .section-title p {
+  color: #fff;
+  text-shadow: none; /* 影も削除 */
+}
+
+#about .cta-link {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  color: #1f3466;
+  padding: 8px 16px;
+  border: 1px solid #1f3466;
+  border-radius: 50px;
+  transition: background-color 0.3s, color 0.3s;
+  align-self: flex-start; /* 左寄せにする */
+  margin-top: auto; /* 他の要素との間にスペースを確保 */
+}
+
+#about .cta-link:hover {
+  background-color: #1f3466;
+  color: #fff;
+}
+
+/* 趣味スライダーのラッパー */
+.hobby-scroller-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+}
+
+/* 趣味スライダー本体 */
+.hobby-scroller {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.hobby-scroller::-webkit-scrollbar {
+  display: none;
+}
+
+/* 趣味カード全体のコンテナ */
+.hobby-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 24px;
+  width: max-content;
+}
+
+/* 個々の趣味カード */
+.hobby-card {
+  flex: 0 0 220px; /* カードの横幅を指定 */
+  text-align: center;
+}
+
+.hobby-card .hobby-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.hobby-card p {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 趣味スライダー用の矢印ボタン */
+.hobby-arrow {
+  /* positionを親要素(.hobby-scroller-wrapper)基準にするため static に */
+  position: static;
+  flex-shrink: 0; /* 縮まないようにする */
+}

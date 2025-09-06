@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Yuki Takamura's Portfolio</title>
+    <meta
+      name="description"
+      content="大妻女子大学 社会情報学部 Yuki Takamuraのポートフォリオサイトです。"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header class="header">
+        <div class="header-inner">
+          <button class="toggle-menu-button">
+            <img src="images/menu.png" alt="メニューボタン" />
+          </button>
+          <div class="header-site-menu">
+            <nav class="site-menu">
+              <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#experience">Experience</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <section id="hero">
+        <img class="hero-bg" src="images/hero.jpg.jpg" alt="Hero image" />
+        <div class="hero-content">
+          <h1>Yuki Takamura</h1>
+
+          <p class="intro">大妻女子大学 社会情報学部 情報デザイン専攻</p>
+          <div class="hero-links">
+            <a
+              href="https://github.com/OWU131323212?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="GitHub"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <main class="main" style="padding-top: 120px">
+        <section id="about">
+          <div class="section-title">
+            <h2>About</h2>
+            <p>私について</p>
+          </div>
+          <div class="about-area">
+            <div class="my-photo">
+              <img
+                src="images/about.png"
+                width="200"
+                height="200"
+                alt="顔写真"
+              />
+            </div>
+            <div class="my-profile">
+              <h3>Yuki Takamura</h3>
+              <p>
+                大妻女子大学 社会情報学部 社会情報学科
+                情報デザイン専攻に所属し、UI/UXデザインやプログラミングを学んでいます。Webアプリケーション制作やアルゴリズムの学習を通して、実践的なスキルを身につけています。
+              </p>
+              <div class="my-profile-details">
+                <div class="detail-item">
+                  <h4><i class="fa-solid fa-id-card"></i> 資格</h4>
+                  <ul>
+                    <li>基本情報技術者</li>
+                    <li>日商簿記3級</li>
+                  </ul>
+                </div>
+                <div class="detail-item">
+                  <h4><i class="fa-solid fa-computer"></i> 得意なこと</h4>
+                  <ul>
+                    <li>Excel操作</li>
+                  </ul>
+                </div>
+                <div class="detail-item hobby-item">
+                  <h4><i class="fa-solid fa-code"></i> 使用言語</h4>
+                  <a href="hobbies.html" class="cta-link">詳しく見る &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="skills">
+          <div class="section-title">
+            <h2>Skills</h2>
+            <p>スキル</p>
+          </div>
+          <div class="skills">
+            <a href="skill-design.html" class="skill-card">
+              <div class="skill">
+                <img src="images/design.png" alt="Designのアイコン" />
+                <h3>Design</h3>
+                <p>
+                  デザインの授業でillustrator、Photoshop、blenderなどのツールを使ってでデザインの知識を深めています。
+                </p>
+              </div>
+            </a>
+            <a href="skill-programming.html" class="skill-card">
+              <div class="skill">
+                <img src="images/programming.png" alt="programmingのアイコン" />
+                <h3>Programming</h3>
+                <p>
+                  html,css,JavaScript,Java,Pythonなどの言語を使ってWebサイトやWebアプリケーションを開発しています。
+                </p>
+              </div>
+            </a>
+            <a href="skill-seminar.html" class="skill-card">
+              <div class="skill">
+                <img src="images/seminer.png" alt="seminerのアイコン" />
+                <h3>Seminar</h3>
+                <p>
+                  ゼミでAIやプログラミングの知識を深めています。obnizや加速度センサを用いて研究しています。
+                </p>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <section id="works">
+          <div class="section-title">
+            <h2>Works</h2>
+            <p>制作物</p>
+          </div>
+          <div class="works-scroller-wrapper">
+            <button class="arrow-button arrow-left" onclick="scrollWorks(-324)">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <div class="works-scroller">
+              <div class="works-container">
+                <div class="works-card">
+                  <img
+                    class="work-image"
+                    src="images/iiwake.png"
+                    alt="Webアプリ"
+                  />
+
+                  <h3>言い訳メーカー</h3>
+                  <span class="tag">Webアプリ</span>
+                </div>
+                <div class="works-card">
+                  <img
+                    class="work-image"
+                    src="images/taiping.png"
+                    alt="抹茶の画像"
+                  />
+                  <h3>IoTデバイスアプリ</h3>
+                  <span class="tag">IoT</span>
+                </div>
+                <div class="works-card">
+                  <img
+                    class="work-image"
+                    src="images/blender.png"
+                    alt="オムライスの画像"
+                  />
+                  <h3>blender作品</h3>
+                  <span class="tag">グラフィック</span>
+                </div>
+                <div class="works-card">
+                  <img
+                    class="work-image"
+                    src="images/gurume.png"
+                    alt="旅行の画像"
+                  />
+                  <h3>飲食店マップ</h3>
+                  <span class="tag">Webサイト</span>
+                </div>
+              </div>
+            </div>
+            <button class="arrow-button arrow-right" onclick="scrollWorks(324)">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </section>
+
+        <section id="experience">
+          <div class="section-title">
+            <h2>Experience</h2>
+            <p>サークル・アルバイト経験</p>
+          </div>
+          <div class="experience-container">
+            <div class="experience-item">
+              <h3><i class="fa-solid fa-users-rays"></i> サークル活動</h3>
+              <ul>
+                <li>軽音サークル</li>
+                <li>女子大生企画サークル</li>
+                <li>パン研究会</li>
+              </ul>
+            </div>
+            <div class="experience-item">
+              <h3><i class="fa-solid fa-mug-saucer"></i> アルバイト</h3>
+              <ul>
+                <li>和カフェ</li>
+                <li>スターバックス</li>
+                <li>ポケモンセンター</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p class="copyright"><small>&copy; Yuki Takamura</small></p>
+      </footer>
+
+      <script src="./js/toggle-menu.js"></script>
+    </div>
+  </body>
+</html>
